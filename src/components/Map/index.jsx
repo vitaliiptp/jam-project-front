@@ -42,47 +42,34 @@ const GoogleMapsStatic = () => {
 
 
 
-  // const radiusHandler = (e) => {
-  //     // setNewRadius(e.target.value * 1_000);
-  //     // circle.setRadius
-  //     // console.log(newRadius);
-  // }
-  //
-  // const changeRadius = () => {
-  //
-  // }
+  const radiusHandler = (e) => {
+      // setNewRadius(e.target.value * 1_000);
+      // circle.setRadius
+      // console.log(newRadius);
+  }
+
+  const changeRadius = () => {
+
+  }
 
 
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
         <button onClick={locateMe} style={{width: "5rem",marginRight: "1rem"}}>Locate Me</button>
-        {/*<form>*/}
-        {/*  <input type="number" id="radius" name="radius" placeholder="radius in km" style={{width: "7rem"}} onChange={radiusHandler} />*/}
-        {/*  <br />*/}
-        {/*  <button style={{width: "7.5rem"}} onClick={changeRadius}>Change Radius</button>*/}
-        {/*</form>*/}
+        <form>
+          <input type="number" id="radius" name="radius" placeholder="radius in km" style={{width: "7rem"}} onChange={radiusHandler} />
+          <br />
+          <button style={{width: "7.5rem"}} onClick={changeRadius}>Change Radius</button>
+        </form>
       </div>
       <GoogleMapReact
         bootstrapURLKeys={{
-          key: "",
+          key: process.env.GOOGLE_MAP_KEY,
         }}
         defaultCenter={location.center}
         defaultZoom={location.zoom}
-        yesIWantToUseGoogleMapApiInternals={true}
-        onGoogleApiLoaded={({ map, maps }) => {
-            new maps.Circle({
-            strokeColor: "#FF0000",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#FF0000",
-            fillOpacity: 0.3,
-            map,
-            center: { lat: location.center.lat, lng: location.center.lng },
-            radius: radius,
-            })
-        }
-        }
+        center={location.center}
       >
         {showUser && (
           <img
