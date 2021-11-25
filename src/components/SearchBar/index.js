@@ -3,7 +3,7 @@ import React from 'react'
 export default function SearchBar() {
     return (
         <div>
-            Hello
+            This is a search bar
         </div>
     )
 }
