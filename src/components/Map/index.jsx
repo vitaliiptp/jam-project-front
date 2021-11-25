@@ -71,6 +71,7 @@ const GoogleMapsStatic = () => {
         defaultZoom={location.zoom}
         center={location.center}
       >
+
         {showUser && (
           <img
             src={dummyImg}
