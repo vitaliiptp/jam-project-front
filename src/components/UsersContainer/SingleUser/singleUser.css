@@ -138,10 +138,16 @@
         font-family: 'Montserrat', sans-serif;
         
       }
+
+      span a:before{
+          content:"MESSAGE"
+      }
+      span a:after{
+          content: "LETS JAM!"
+      }
       span a:before,
       span a:after{
         position: absolute;
-        content: "LETS JAM!";
         height: 35px;
         width: 180px;
         display: flex;
