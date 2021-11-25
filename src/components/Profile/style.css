@@ -1,0 +1,11 @@
+.Profile{
+    width:80%;
+    padding: 1rem;
+}
+form{
+    display: flex;  
+    flex-direction: column;
+}
+label{
+    margin-bottom:2rem;
+}
