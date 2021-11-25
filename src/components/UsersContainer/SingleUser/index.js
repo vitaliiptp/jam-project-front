@@ -37,8 +37,8 @@ export default function SingleUser(props) {
                 <div className="single-user-jam-button-wrapper">
                     {/* <button className="single-user-jam-button">Let's Jam!</button> */}
                     <span onClick={()=>{
-                        alert(`Please contact me on the following email: ${contactMail} or phone number: ${contactPhone}`)
-                    }}><a href="#"></a></span>
+                        alert(`EMAIL: ${contactMail} or PHONE NUMBER: ${contactPhone}`)
+                    }} ><a href="#" title="Click to display contact details"></a></span>
 
                 </div>
             </div>

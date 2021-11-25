@@ -46,11 +46,11 @@
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-      margin-top: -0.5rem;
+      margin-top: -0.8rem;
   }
 
   .single-user-top-details-big-heading{
-      margin-bottom: 0.7rem;
+      margin-bottom: 1rem;
   }
 
  
@@ -60,7 +60,7 @@
       height: 40px;
       display: flex;
       justify-content: space-around;
-      margin: 0.9rem 0;
+      margin: 1rem 0;
   }
 
   .ikon{
@@ -97,8 +97,8 @@
     }
 
     .userImage{
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
         border: 2px solid rgb(27, 7, 7);
     }
@@ -140,7 +140,7 @@
       }
 
       span a:before{
-          content:"MESSAGE"
+          content:"MESSAGE ME"
       }
       span a:after{
           content: "LETS JAM!"

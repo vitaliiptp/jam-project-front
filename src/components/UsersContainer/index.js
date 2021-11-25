@@ -1,6 +1,8 @@
-import React from 'react'
-import SingleUser from './SingleUser'
-import './usersContainer.css'
+import React from 'react';
+import SingleUser from './SingleUser';
+import './usersContainer.css';
+import axios from 'axios';
+
 
 export default function UserContainer() {
 
