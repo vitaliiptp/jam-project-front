@@ -1,7 +1,7 @@
 import './style.css'
 import axios from 'axios';
 import React, {useEffect, useState,useContext} from 'react';
-import {MainContext} from '../../App';
+//import {MainContext} from '../../App';
 
 export default function Profile() {
     const [name,setName] = useState("");
@@ -11,12 +11,12 @@ export default function Profile() {
     const [level,setLevel] = useState("beginner");
     const [genre,setGenre] = useState([]);
     const [instrument,setInstrument] = useState([]);
-    const [message,setMessage]= useState([]);
-    const {userId}= useContext(MainContext);
+    const [bio,setBio]= useState([]);
+    //const {userId}= useContext(MainContext);
     
     const submitProfil=()=>{
         axios.post('/user', {
-            userId:userId,
+           // userId:userId,
             name: name,
             city: city,
             email:email,
@@ -24,7 +24,7 @@ export default function Profile() {
             level:level,
             genre:genre,
             instrument:instrument,
-            message:message
+            bio:bio
       })
       .then(function (response) {
         console.log(response);
@@ -36,6 +36,7 @@ export default function Profile() {
 
    return (
         <div className="Profile">
+            <h2>Create your Profile</h2>
             <form onSubmit={submitProfil}> 
                 <label>
                     Name:
@@ -64,8 +65,7 @@ export default function Profile() {
                     <option value="professional">professional</option>
                 </select>
                 <label for="selectLevel" className="selectLabel">Your genres:</label>
-                <select name="genre" multiple="multiple"
-                className="selectMultiple" name="level" onChange={(e) => setGenre(e.target.value)}>
+                <select name="genre" className="selectMultiple" name="level" onChange={(e) => setGenre(e.target.value)}>
                     <option value="rock">rock</option>
                     <option value="indie">indie</option>
                     <option value="jazz">jazz</option>
@@ -73,8 +73,7 @@ export default function Profile() {
                     <option value="blues">blues</option>
                 </select>
                 <label for="selectLevel" className="selectLabel">Your instruments:</label>
-                <select name="instrument" multiple="multiple"
-                 className="selectMultiple" name="level" onChange={(e) => setInstrument(e.target.value)}>
+                <select name="instrument" className="selectMultiple" name="level" onChange={(e) => setInstrument(e.target.value)}>
                     <option value="singing">singing</option>
                     <option value="giutar">giutar</option>
                     <option value="drums">drums</option>
@@ -83,9 +82,10 @@ export default function Profile() {
                     <option value="synthesizer">synthesizer</option>
                     <option value="triangel">triangle</option>
                 </select>
-                <textarea name="message" onChange={(e) => setMessage(e.target.value)}>write sth about you...</textarea>
+                <label for="text">write sth about you..</label>
+                <textarea name="bio" onChange={(e) => setBio(e.target.value)}></textarea>
 
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Submit" className="submitButton"/>
             </form>
         </div>
     )
