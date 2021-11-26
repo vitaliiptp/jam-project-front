@@ -34,7 +34,10 @@ export default function SearchBar(props) {
 
   return (
     <div className="UserSearchBar">
-      <form onSubmit={handleSubmit}>
+      <h1>SEARCH FOR JAMMERS TO JAM!</h1>
+      <form className="formUserSearchBar"
+      onSubmit={handleSubmit}>
+       <div className="formSelect">
         <select
         className="selectTheOption"
           onChange={(e) => {
@@ -95,7 +98,8 @@ export default function SearchBar(props) {
             );
           })}
         </select>
-        <button type="submit">Search</button>
+       </div>
+        <button className="search-user-btn"type="submit">SEARCH</button>
       </form>
     </div>
   );
