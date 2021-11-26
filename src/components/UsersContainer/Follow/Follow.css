@@ -1,0 +1,11 @@
+.isFavorite {
+    width: 30px;
+    height: 30px;
+    color: rgb(224, 44, 44);
+}
+  
+  .notFavorite {
+    width: 30px;
+    height: 30px;
+  }
+

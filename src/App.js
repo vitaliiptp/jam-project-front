@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 import './App.css';
 import Profile from '../src/components/Profile';
@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/Navbar/About';
 import Welcome from './components/Welcome';
+import MainSearchPage from './components/MainSearchPage';
 
 export const MainContext = createContext();
 
@@ -139,9 +140,9 @@ function App() {
             <Route path='/profile'>
               <Profile />
             </Route>
-            {/* <Route path='/search'>
-              <Search />
-            </Route> */}
+            <Route path='/search'>
+              <MainSearchPage />
+            </Route>
           </Switch>
         </div>
       </BrowserRouter>

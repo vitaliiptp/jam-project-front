@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+.single-user-main-wrapper{
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+  }
+
+  /* ///////////////////TOP PART OF THE CARD\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+  .single-user-top-part{
+      width: 100%;
+      height: 235px;
+      display: flex;
+      flex-direction: column;
+      background: url("../../images/backgrounds/concert-background-bw1.png");
+      background-size: cover;
+      color: aliceblue;
+      /* align-items: center; */
+      justify-content: space-between;
+    }
+
+
+
+  .single-user-follow-feature{
+    display: flex;
+    align-self: flex-end;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .single-user-top-details{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      margin-top: -0.8rem;
+  }
+
+  .single-user-top-details-big-heading{
+      margin-bottom: 1rem;
+  }
+
+ 
+
+  .single-user-middle-ikons{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem 0;
+  }
+
+  .ikon{
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+  }
+
+  .spotify{
+      color:rgb(21, 190, 21)
+  }
+
+  .youtube{
+    color:rgb(231, 46, 46)
+}
+.twitter{
+    color:rgb(37, 151, 226)
+}
+.linkedin{
+    color:rgb(26, 120, 197);
+    border-radius: 50%;
+}
+
+    /* ///////////////////BOTTOM PART OF THE CARD\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+    .single-user-bottom-part{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+
+    .userImage{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 2px solid rgb(27, 7, 7);
+    }
+
+    .single-user-bottom-part-musician-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+        font-family: 'Inconsolata', monospace;
+    }
+/* 
+    .single-user-jam-button{
+        border-radius: 2rem;
+        width: 9rem;
+        height: 2rem;
+        border: none;
+        background-color: blueviolet;
+    } */
+
+    span{
+        position: relative;
+        display: inline-flex;
+        width: 180px;
+        height: 40px;
+        margin: 0 15px;
+        perspective: 1000px;
+      }
+      span a{
+        font-size: 19px;
+        letter-spacing: 1px;
+        transform-style: preserve-3d;
+        transform: translateZ(-15px);
+        transition: transform .25s;
+        font-family: 'Montserrat', sans-serif;
+        
+      }
+
+      span a:before{
+          content:"MESSAGE ME"
+      }
+      span a:after{
+          content: "LETS JAM!"
+      }
+      span a:before,
+      span a:after{
+        position: absolute;
+        height: 35px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid rgb(52, 44, 51);
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      span a:before{
+        color: #fff;
+        background: rgb(52, 44, 51);
+        transform: rotateY(0deg) translateZ(15px);
+      }
+      span a:after{
+        color: #000;
+        transform: rotateX(90deg) translateZ(15px);
+      }
+      span a:hover{
+        transform: translateZ(-15px) rotateX(-90deg);
+      }
