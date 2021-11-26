@@ -4,6 +4,11 @@ import './App.css';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+// import Register from './components/Navbar/Register';
+// import Login from './components/Navbar/Login';
+import About from './components/Navbar/About';
+import Welcome from './components/Welcome';
 
 export const MainContext = createContext();
 
@@ -126,8 +131,11 @@ function App() {
             setMessage={setMessage}
           />
           <Switch>
-            <Route exact path='/'>
-              <HomePage />
+            <Route path='/' exact>
+              <Welcome />
+            </Route>
+            <Route path='/about'>
+              <About />
             </Route>
           </Switch>
         </div>
