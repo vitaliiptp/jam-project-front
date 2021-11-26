@@ -14,7 +14,8 @@ export default function UserContainer({ myData, searchCriteria }) {
 
   return (
     <div className="main-users-container">
-      {newData.map((user, id) => {
+      {
+      (newData.length>0 ? newData : myData).map((user, id) => {
         return (
           <SingleUser
             key={`usersMapping${id}`}
