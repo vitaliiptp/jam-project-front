@@ -29,6 +29,11 @@ function Navbar({ setLoginModal, setRegisterModal, logout }) {
             <li>Search</li>
           </Link>
         )}
+        {userName && (
+          <Link to='/map'>
+            <li>Map</li>
+          </Link>
+        )}
         {!userName && <li onClick={() => setLoginModal(true)}>Log in</li>}
         {!userName && (
           <li href='' onClick={() => setRegisterModal(true)}>

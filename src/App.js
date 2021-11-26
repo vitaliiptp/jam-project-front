@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import About from './components/Navbar/About';
 import Welcome from './components/Welcome';
 import MainSearchPage from './components/MainSearchPage';
+import Map from './components/Map';
 
 export const MainContext = createContext();
 
@@ -142,6 +143,9 @@ function App() {
             </Route>
             <Route path='/search'>
               <MainSearchPage />
+            </Route>
+            <Route path='/map'>
+              <Map />
             </Route>
           </Switch>
         </div>
