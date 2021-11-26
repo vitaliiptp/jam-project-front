@@ -137,6 +137,12 @@ function App() {
             <Route path='/about'>
               <About />
             </Route>
+            {/* <Route path='/profile'>
+              <Profile />
+            </Route>
+            <Route path='/search'>
+              <Search />
+            </Route> */}
           </Switch>
         </div>
       </BrowserRouter>
