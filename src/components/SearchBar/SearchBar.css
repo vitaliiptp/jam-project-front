@@ -89,53 +89,9 @@
   border-radius: 0.5rem;
 }
 
-
-
-span{
-  position: relative;
-  display: inline-flex;
-  width: 180px;
-  height: 40px;
-  margin: 0 15px;
-  perspective: 1000px;
-}
-span a{
-  font-size: 19px;
-  letter-spacing: 1px;
-  transform-style: preserve-3d;
-  transform: translateZ(-15px);
-  transition: transform .25s;
-  font-family: 'Montserrat', sans-serif;
-  
+.search-user-btn:hover{
+  cursor: pointer;
+  background: rgb(107, 88, 104);
 }
 
-span a:before{
-    content:"MESSAGE ME"
-}
-span a:after{
-    content: "LETS JAM!"
-}
-span a:before,
-span a:after{
-  position: absolute;
-  height: 35px;
-  width: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid rgb(52, 44, 51);
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-span a:before{
-  color: #fff;
-  background: rgb(52, 44, 51);
-  transform: rotateY(0deg) translateZ(15px);
-}
-span a:after{
-  color: #000;
-  transform: rotateX(90deg) translateZ(15px);
-}
-span a:hover{
-  transform: translateZ(-15px) rotateX(-90deg);
-}
+
