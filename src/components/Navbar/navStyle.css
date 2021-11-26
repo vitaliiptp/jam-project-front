@@ -1,0 +1,127 @@
+#body {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.NavigationContainer {
+    margin: 0;
+	padding: 0;
+	border: 0;
+    box-sizing: border-box;
+    background-color: rgb(38, 15, 75);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 8vh;
+}
+
+.NavigationContainer a {
+    text-decoration: none;
+}
+
+.logo {
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 0.5vh;
+    font-size: larger;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: red;
+    text-decoration: none;
+    letter-spacing: 0.2vh;
+    font-size: medium;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .burger {
+        display: block;
+    }
+    .nav-links {
+     display: none;
+    }
+    .nav-links li {
+        display: none;
+    }
+    .nav-links ul {
+        display: none;
+    }
+}
+
+.nav-active {
+    position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(38, 15, 75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in;
+        margin: 0;
+        padding: 0;
+}
+
+.nav-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-active li {
+    list-style: none;
+}
+
+.nav-active a {
+    color: red;
+    text-decoration: none;
+    letter-spacing: 0.2vh;
+    font-size: medium;
+}
+
+.nav-active ul {
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+
+
