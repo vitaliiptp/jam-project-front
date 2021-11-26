@@ -4,14 +4,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import { MainContext } from '../../App';
 
 export default function Profile() {
-  const [name, setName] = useState('');
   const [city, setCity] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [level, setLevel] = useState('beginner');
-  const [genre, setGenre] = useState([]);
-  const [instrument, setInstrument] = useState([]);
-  const [bio, setBio] = useState([]);
+  const [genre, setGenre] = useState('rock');
+  const [instrument, setInstrument] = useState('singing');
+  const [bio, setBio] = useState('');
   const { userId } = useContext(MainContext);
 
   const submitProfile = (e) => {
@@ -19,7 +18,6 @@ export default function Profile() {
     axios
       .post('/users', {
         userId: userId,
-        name: name,
         city: city,
         email: email,
         phone: phone,
@@ -40,42 +38,27 @@ export default function Profile() {
     <div className='Profile'>
       <h2>Create your Profile</h2>
       <form onSubmit={submitProfile}>
-        <label>
-          Name:
-          <input
-            type='text'
-            name='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label>
-          City:
-          <input
-            type='text'
-            name='city'
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type='text'
-            name='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Phone:
-          <input
-            type='text'
-            name='phone'
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </label>
+        <label>City:</label>
+        <input
+          type='text'
+          name='city'
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <label>Email:</label>
+        <input
+          type='text'
+          name='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>Phone:</label>
+        <input
+          type='text'
+          name='phone'
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
         <label for='selectLevel' className='select'>
           Your Level:
         </label>

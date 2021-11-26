@@ -1,27 +1,27 @@
-.Profile{
-    width:50%;
-    padding: 1rem;
-    border:solid;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px grey;
-    margin: 5rem auto 0;
-    text-align: center;
-    background: white;
-
+.Profile {
+  width: 50%;
+  padding: 1rem;
+  border: solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  margin: 5rem auto 0;
+  text-align: center;
+  background: white;
 }
 
-form{
-    display: flex;  
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-label{
-    margin-bottom:0.2rem;
+label {
+  margin-bottom: 0.2rem;
 }
-select{
-    width:50%;
-    margin: 0 auto 2rem;
+select {
+  width: 50%;
+  margin: 0 auto 2rem;
 }
-.submitButton{
-    width:6rem;
-    margin: 1rem auto 0;
+.submitButton {
+  width: 6rem;
+  margin: 1rem auto 0;
 }
