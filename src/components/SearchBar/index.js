@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css";
+import "./SearchBar.css";
 export default function SearchBar(props) {
   const [skillLevel, setSkillLevel] = useState([
     "Beginner",
@@ -31,9 +31,10 @@ export default function SearchBar(props) {
   };
 
   return (
-    <div className="SearchBar">
+    <div className="UserSearchBar">
       <form onSubmit={handleSubmit}>
         <select
+        className="selectTheOption"
           onChange={(e) => {
             setCity(e.target.value);
           }}
@@ -48,6 +49,7 @@ export default function SearchBar(props) {
           })}
         </select>
         <select
+        className="selectTheOption"
           onChange={(e) => {
             setSearchSkillLevel(e.target.value);
           }}
@@ -62,6 +64,7 @@ export default function SearchBar(props) {
           })}
         </select>
         <select
+        className="selectTheOption"
           onChange={(e) => {
             setSearchInstrument(e.target.value);
           }}
@@ -76,6 +79,7 @@ export default function SearchBar(props) {
           })}
         </select>
         <select
+        className="selectTheOption"
           onChange={(e) => {
             setSearchGenres(e.target.value);
           }}
