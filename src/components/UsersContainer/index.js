@@ -33,7 +33,7 @@ export default function UserContainer() {
     {
         user_id: "3",
         user_name: "Eike",
-        city:'Berlin',
+        city:'Hannover',
         contact_mail:"eike@gmail.com",
         skill_level: "intermediate",
         instrument: "harmonica",
@@ -82,7 +82,7 @@ export default function UserContainer() {
     {
         user_id: "7",
         user_name: "Lena",
-        city:'Berlin',
+        city:'Dortmund',
         contact_mail:"lena@gmail.com",
         skill_level: "advanced",
         instrument: "electric guitar",
@@ -110,6 +110,18 @@ export default function UserContainer() {
         contact_mail:"ugo@gmail.com",
         skill_level: "intermediate",
         instrument: "vocal",
+        genre: "rock",
+        contact_phone: "+123123123",
+                // picture: "picture"
+
+    },
+        {
+        user_id: "10",
+        user_name: "Mez",
+        city:'Hannover',
+        contact_mail:"mez@gmail.com",
+        skill_level: "intermediate",
+        instrument: "harmonica",
         genre: "rock",
         contact_phone: "+123123123",
                 // picture: "picture"
