@@ -1,12 +1,11 @@
 import { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 import './App.css';
+import Profile from '../src/components/Profile';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-// import Register from './components/Navbar/Register';
-// import Login from './components/Navbar/Login';
 import About from './components/Navbar/About';
 import Welcome from './components/Welcome';
 
@@ -137,10 +136,10 @@ function App() {
             <Route path='/about'>
               <About />
             </Route>
-            {/* <Route path='/profile'>
+            <Route path='/profile'>
               <Profile />
             </Route>
-            <Route path='/search'>
+            {/* <Route path='/search'>
               <Search />
             </Route> */}
           </Switch>
