@@ -21,12 +21,14 @@ export default function SearchBar(props) {
   const [searchGenres, setSearchGenres] = useState();
   const [searchInstrument, setSearchInstrument] = useState();
   const [searchSkillLevel, setSearchSkillLevel] = useState();
+  const [searchCity, setSearchCity] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setSearchCriteria({
       genre: searchGenres,
       instrument: searchInstrument,
       skill_level: searchSkillLevel,
+      city: searchCity
     });
   };
 
@@ -35,7 +37,7 @@ export default function SearchBar(props) {
       <form onSubmit={handleSubmit}>
         <select
           onChange={(e) => {
-            setCity(e.target.value);
+            setSearchCity(e.target.value);
           }}
         >
           <option value="">City</option>
