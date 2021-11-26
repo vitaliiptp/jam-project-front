@@ -18,7 +18,7 @@ export default function SingleUser(props) {
                 </div>
                 <div className="single-user-top-details">
                     <h4 className="single-user-top-details-big-heading">{userName}, {city}</h4>
-                    <img src={TestImage} className="userImage"/>
+                    <img src={TestImage} className="userImage" alt={userName}/>
                 </div>
                 <div className="single-user-middle-ikons">
                     <AiFillLinkedin className="ikon linkedin" />
