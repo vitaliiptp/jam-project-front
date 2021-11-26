@@ -28,8 +28,12 @@ export default function SearchBar(props) {
       genre: searchGenres,
       instrument: searchInstrument,
       skill_level: searchSkillLevel,
-      city: searchCity
+      city: searchCity,
+      isSearching: true
     });
+  };
+  const handleReset = (e) => {
+    props.setSearchCriteria({isSearch: false});
   };
 
   return (
@@ -92,6 +96,9 @@ export default function SearchBar(props) {
           })}
         </select>
         <button type="submit">Search</button>
+        <button type="reset" onClick={handleReset}>
+          Reset
+        </button>
       </form>
     </div>
   );
