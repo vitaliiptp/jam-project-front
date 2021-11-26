@@ -170,7 +170,7 @@ const GoogleMapsStatic = () => {
               style={{ width: "40px", height: "auto", borderRadius: "30%", cursor: "pointer" }}
               lat={userData.latitude}
               lng={userData.longitude}
-              onClick={() => {handleModal(userData.id)}}
+              onClick={() => {handleModal(userData.user_id)}}
             />
           ))}
       </GoogleMapReact>

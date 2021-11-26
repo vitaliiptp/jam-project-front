@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: theme.spacing(2),
-    background: "rgba(14,16,19,0.87)",
+    background: "rgba(82,85,93,0.87)",
     backdropFilter: "blur(1.5rem)",
     fontFamily: "Impact",
 
@@ -53,7 +53,8 @@ const UserModalMap = ({
     <Dialog open={openUserModal} onClose={handleCloseUserModal}>
       <Box className={classes.root}>
         <img src={user.picture} alt={user.id} />
-        <p>Hi, I am from {user.city}</p>
+        <p>Hi, my name is: {user.user_name}</p>
+        <p>I am from {user.city}</p>
         <p>You can contact me: {user.contact_mail}</p>
         <p>I prefer: {user.genre}</p>
         <p>My lever is: {user.skill_level}</p>

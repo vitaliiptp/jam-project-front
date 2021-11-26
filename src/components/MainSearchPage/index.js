@@ -5,11 +5,12 @@ import data from "../images/data.js";
 import axios from "axios";
 
 export default function MainSearchPage() {
-  useEffect(() => {
-    axios.get("http://192.168.178.184:5000/users").then((res) => {
-      setMyData(res.data);
-    });
-  });
+  // useEffect(() => {
+  //   axios.get("/users").then((res) => {
+  //     setMyData(res.data);
+  //     console.log(res.data)
+  //   });
+  // }, []);
   const [myData, setMyData] = useState(data);
   const [searchCriteria, setSearchCriteria] = useState({});
   return (
