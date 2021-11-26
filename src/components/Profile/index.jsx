@@ -1,7 +1,7 @@
 import './style.css'
 import axios from 'axios';
 import React, {useEffect, useState,useContext} from 'react';
-//import {MainContext} from '../../App';
+import {MainContext} from '../../App';
 
 export default function Profile() {
     const [name,setName] = useState("");
@@ -12,11 +12,11 @@ export default function Profile() {
     const [genre,setGenre] = useState([]);
     const [instrument,setInstrument] = useState([]);
     const [bio,setBio]= useState([]);
-    //const {userId}= useContext(MainContext);
+    const {userId}= useContext(MainContext);
     
     const submitProfil=()=>{
         axios.post('/user', {
-           // userId:userId,
+            userId:userId,
             name: name,
             city: city,
             email:email,

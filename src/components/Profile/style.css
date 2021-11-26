@@ -4,7 +4,7 @@
     border:solid;
     border-radius: 20px;
     box-shadow: 5px 5px 10px grey;
-    margin: 0 auto;
+    margin: 5rem auto 0;
     text-align: center;
 
 }
@@ -14,7 +14,7 @@ form{
     flex-direction: column;
 }
 label{
-    margin-bottom:1rem;
+    margin-bottom:0.2rem;
 }
 select{
     width:50%;
