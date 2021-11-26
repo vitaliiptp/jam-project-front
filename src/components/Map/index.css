@@ -1,0 +1,13 @@
+.search-user-btn{
+    width: 8rem;
+    height: 3rem;
+    background: black ;
+    border: 3px solid white;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.search-user-btn:hover{
+    cursor: pointer;
+    background: rgb(107, 88, 104);
+}
